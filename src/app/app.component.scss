@@ -1,15 +1,35 @@
-*{
-    max-width: 1280px;
-}
-
 .hero {
     background-image: url('../assets/bg.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
     color: #fff;
     height: 100vh;
     position: absolute;
+    padding: 15px;
     top: 0;
     right: 0;
     left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    h1{
+        max-width: 800px;
+        font-size: 60px;
+    }
+
+    p{
+        max-width: 586px;
+        font-size: 20px;
+    }
+
+    .scroll{
+        position: absolute;
+        bottom: 50px;
+    }
 }
 
 header{
@@ -17,12 +37,18 @@ header{
     z-index: 1;
     color: #fff;
 
-    nav ul li{
-        list-style: none;
+    nav{
 
-        a{
-            text-decoration: none;
-            color: #fff;
+        ul{
+
+            li{
+                list-style: none;
+
+                a{
+                    text-decoration: none;
+                    color: #fff;
+                }
+            }
         }
     }
 }
