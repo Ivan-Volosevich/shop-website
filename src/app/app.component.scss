@@ -1,0 +1,28 @@
+*{
+    max-width: 1280px;
+}
+
+.hero {
+    background-image: url('../assets/bg.png');
+    color: #fff;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+header{
+    position: relative;
+    z-index: 1;
+    color: #fff;
+
+    nav ul li{
+        list-style: none;
+
+        a{
+            text-decoration: none;
+            color: #fff;
+        }
+    }
+}
