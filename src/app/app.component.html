@@ -9,7 +9,7 @@
       <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#">Products</a></li>
-        <li><a href=""><img src="../assets/cart.png" alt=""></a></li>
+        <li><a href="#"><img src="../assets/cart.png" alt=""></a></li>
       </ul>
     </nav>
   </header>
@@ -22,9 +22,72 @@
     </div>
   </div>
 
-  <div class="filter"></div>
+  <div class="filter">
+    <div>
+      <input type="checkbox">
+      <p>men</p>
 
-  <div class="container"></div>
+      <input type="checkbox">
+      <p>women</p>
+
+      <input type="checkbox">
+      <p>children</p>
+    </div>
+
+      <button>see all products</button>
+  </div>
+
+  <div class="catalog">
+    <div class="header">
+      <p>men</p>
+    </div>
+
+    <div class="items">
+      <drag-scroll>
+        <div *ngFor="let item of sliderItems" drag-scroll-item class="item">
+          <div class="top">
+            <div class="size">size</div>
+            <div class="color">color</div>
+          </div>
+          
+          <div class="img"><img src="../assets/t-shirt.png" alt="photo"></div>
+
+          <div class="bottom">
+            <div class="name">{{ item.name }}</div>
+            <div class="price">{{ item.price | currency:"EUR" }}</div>
+          </div>
+        </div>
+      </drag-scroll>
+
+      <!-- <div class="item">
+        <div class="top">
+          <div class="size">size</div>
+        </div>
+        
+        <div class="img"><img src="../assets/pants.png" alt="photo"></div>
+
+        <div class="bottom">
+          <div class="name">Pants FORCLAZ</div>
+          <div class="price">30,00€</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="top">
+          <div class="size">10 Litri</div>
+        </div>
+        
+        <div class="img"><img src="../assets/backpack.png" alt="photo"></div>
+
+        <div class="bottom">
+          <div class="name">backpack</div>
+          <div class="price">60,00€</div>
+        </div>
+      </div> -->
+    </div>
+
+
+  </div>
 
   <div class="about"></div>
 
