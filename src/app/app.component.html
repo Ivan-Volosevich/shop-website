@@ -42,50 +42,33 @@
       <p>men</p>
     </div>
 
-    <div class="items">
-      <drag-scroll>
-        <div *ngFor="let item of sliderItems" drag-scroll-item class="item">
-          <div class="top">
-            <div class="size">size</div>
-            <div class="color">color</div>
-          </div>
-          
-          <div class="img"><img src="../assets/t-shirt.png" alt="photo"></div>
+    <div>
 
-          <div class="bottom">
-            <div class="name">{{ item.name }}</div>
-            <div class="price">{{ item.price | currency:"EUR" }}</div>
-          </div>
-        </div>
-      </drag-scroll>
-
-      <!-- <div class="item">
-        <div class="top">
-          <div class="size">size</div>
-        </div>
-        
-        <div class="img"><img src="../assets/pants.png" alt="photo"></div>
-
-        <div class="bottom">
-          <div class="name">Pants FORCLAZ</div>
-          <div class="price">30,00€</div>
-        </div>
+      <div class="items-btn">
+        <button (click)="moveLeft()">Left</button>
+        <button (click)="moveRight()">Right</button>
       </div>
 
-      <div class="item">
-        <div class="top">
-          <div class="size">10 Litri</div>
-        </div>
+      <div class="items">
+
+        <drag-scroll #nav>
+          <div *ngFor="let item of sliderItems" drag-scroll-item class="item">
+            <div class="top">
+              <div class="size">size</div>
+              <div class="color">color</div>
+            </div>
+            
+            <div class="img"><img src="../assets/t-shirt.png" alt="photo"></div>
+
+            <div class="bottom">
+              <div class="name">{{ item.name }}</div>
+              <div class="price">{{ item.price | currency:"EUR" }}</div>
+            </div>
+          </div>
+        </drag-scroll>
         
-        <div class="img"><img src="../assets/backpack.png" alt="photo"></div>
-
-        <div class="bottom">
-          <div class="name">backpack</div>
-          <div class="price">60,00€</div>
-        </div>
-      </div> -->
+      </div>
     </div>
-
 
   </div>
 
