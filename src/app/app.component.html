@@ -44,9 +44,13 @@
 
     <div>
 
+      <div class="items-count">
+        <div>1 / 5</div>
+      </div>
+
       <div class="items-btn">
-        <button (click)="moveLeft()">Left</button>
-        <button (click)="moveRight()">Right</button>
+        <button (click)="moveLeft()" class="btn-left"></button>
+        <button (click)="moveRight()" class="btn-right"></button>
       </div>
 
       <div class="items">
@@ -54,8 +58,8 @@
         <drag-scroll #nav>
           <div *ngFor="let item of sliderItems" drag-scroll-item class="item">
             <div class="top">
-              <div class="size">size</div>
-              <div class="color">color</div>
+              <div class="size">{{ item.size }}</div>
+              <div class="color">{{ item.color }}</div>
             </div>
             
             <div class="img"><img src="../assets/t-shirt.png" alt="photo"></div>
@@ -70,9 +74,50 @@
       </div>
     </div>
 
+    <!---->
+
+    <div class="header__w">
+      <p>women</p>
+    </div>
+
+    <div>
+
+      <div class="items-count__w">
+        <div>1 / 5</div>
+      </div>
+
+      <div class="items-btn__w">
+        <button (click)="moveLeft()" class="btn-left"></button>
+        <button (click)="moveRight()" class="btn-right"></button>
+      </div>
+
+      <div class="items">
+
+        <drag-scroll #nav>
+          <div *ngFor="let item of sliderItems" drag-scroll-item class="item">
+            <div class="top">
+              <div class="size">{{ item.size }}</div>
+              <div class="color">{{ item.color }}</div>
+            </div>
+            
+            <div class="img"><img src="../assets/w-giacket.png" alt="photo"></div>
+
+            <div class="bottom">
+              <div class="name">{{ item.name }}</div>
+              <div class="price">{{ item.price | currency:"EUR" }}</div>
+            </div>
+          </div>
+        </drag-scroll>
+        
+      </div>
+    </div>
+
   </div>
 
-  <div class="about"></div>
+  <div class="about">
+    <h3>About us</h3>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi, quaerat dignissimos rerum corrupti deleniti et tenetur perferendis, repudiandae ipsam praesentium sit facilis soluta sequi nihil.</p>
+  </div>
 
   <div class="footer"></div>
 

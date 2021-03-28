@@ -9,24 +9,34 @@ import { DragScrollComponent } from 'ngx-drag-scroll';
 export class AppComponent {
   title = 'shop-website';
 
-  public sliderItems: Array<{name: string, price: number}> = [
+  public sliderItems: Array<{size: string, color: string, name: string, price: number}> = [
     {
+      size: 'size',
+      color: 'color',
       name: 't-shirt',
       price: 5,
     },
     {
+      size: 'size',
+      color: '',
       name: 'Pants FORCLAZ',
       price: 30,
     },
     {
+      size: '10litri',
+      color: '',
       name: 'backpack',
       price: 60,
     },
     {
+      size: 'size',
+      color: '',
       name: 'hat',
       price: 15,
     },
     {
+      size: 'size',
+      color: 'color',
       name: 'scarf',
       price: 12,
     },
