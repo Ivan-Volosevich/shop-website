@@ -279,25 +279,84 @@ header {
         top: 28px;
         padding: 0 13px;
         margin: 0;
+        font-size: 20px;
     }
 
     p {
         padding: 90px 120px;
         border: 2px solid #837659;
         max-width: 710px;
+        font-size: 16px;
+        font-weight: bold;
     }
 }
 
 .footer {
+    color: #fff;
+    text-transform: uppercase;
 
     .twitter-text {
         height: 70px;
-        color: #fff;
         background-color: #535253;
+        display: flex;
+        align-items: center;
+        padding-left: 65px;
+
+        p {
+            text-transform: none;
+            font-weight: bold;
+        }
     }
 
     .info {
         height: 350px;
         background-color: #424242;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 65px;
+
+        .text {
+            max-width: 317px;
+
+            h5 {
+                font-size: 20px;
+                font-weight: bold;
+            }
+
+            p {
+                font-size: 10px;
+            }
+        }
+
+        .contacts {
+
+            .nav {
+
+                :first-child {
+                    margin-left: 0;
+                }
+
+                :last-child {
+                    margin-right: 0;
+                }
+                
+                a {
+                    color: #fff;
+                    text-decoration: none;
+                    font-size: 14px;
+                    margin: 0 5px;
+                }
+            }
+    
+            p {
+                text-transform: none;
+                font-weight: bold;
+                font-size: 18px;
+                line-height: 28px;
+            }
+        }
     }
+
+
 }
