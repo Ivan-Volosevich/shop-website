@@ -1,7 +1,7 @@
 header {
     display: flex;
     justify-content: space-between;
-    margin: 50px;
+    margin: 50px 64px;
     position: absolute;
     top: 0;
     right: 0;
@@ -64,7 +64,7 @@ header {
     text-transform: uppercase;
     display: flex;
     justify-content: space-between;
-    background-color: #8f8f8f;      //#f5f6f7
+    background-color: #f5f6f7;
     padding: 46px 95px;
     max-height: 142px;
 
@@ -181,6 +181,10 @@ header {
 
             .img {
                 padding: 0px 70px;
+
+                img {
+                    max-height: 200px;
+                }
             }
 
             .bottom {
@@ -281,5 +285,19 @@ header {
         padding: 90px 120px;
         border: 2px solid #837659;
         max-width: 710px;
+    }
+}
+
+.footer {
+
+    .twitter-text {
+        height: 70px;
+        color: #fff;
+        background-color: #535253;
+    }
+
+    .info {
+        height: 350px;
+        background-color: #424242;
     }
 }
