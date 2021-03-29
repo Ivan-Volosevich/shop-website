@@ -8,6 +8,7 @@ import { DragScrollComponent } from 'ngx-drag-scroll';
 })
 export class AppComponent {
   title = 'shop-website';
+  index = 1;
 
   public sliderItems: Array<{size: string, color: string, name: string, price: number, image: string}> = [
     {
@@ -55,5 +56,10 @@ export class AppComponent {
 
   moveRight() {
     this.ds.moveRight();
+  }
+
+  onIndexChanged(idx: any) {
+    this.index = idx;
+    console.log('current index: ' + idx);
   }
 }
