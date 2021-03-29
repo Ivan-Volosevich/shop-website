@@ -16,21 +16,27 @@
 
   <div class="hero">
     <h1>Our clothing , your comfort</h1>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam nam iste quisquam laboriosam, perspiciatis eveniet maxime perferendis cum laborum est accusantium soluta praesentium dolore magnam.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
     <div class="scroll">
-      <img src="../assets/chevron.png" alt="chevron">
+      <a href="#filter"><img src="../assets/chevron.png" alt="chevron"></a>
     </div>
   </div>
 
-  <div class="filter">
+  <div id="filter" class="filter">
     <div>
-      <input type="checkbox">
+      <label>
+        <input type="checkbox" class="custom-checkbox" checked>
+      </label>
       <p>men</p>
 
-      <input type="checkbox">
+      <label>
+        <input type="checkbox" class="custom-checkbox" checked>
+      </label>
       <p>women</p>
 
-      <input type="checkbox">
+      <label>
+        <input type="checkbox" class="custom-checkbox">
+      </label>
       <p>children</p>
     </div>
 
@@ -44,25 +50,25 @@
 
     <div>
 
-      <div class="items-count">
-        <div>1 / 5</div>
+      <div class="items-counter">
+        {{ currentNumber }} / {{  itemsAmount  }}
       </div>
 
       <div class="items-btn">
-        <button (click)="moveLeft()" class="btn-left"></button>
-        <button (click)="moveRight()" class="btn-right"></button>
+        <button *ngIf="leftButtonVisible" (click)="moveLeft()" class="btn-left"></button>
+        <button *ngIf="rightButtonVisible" (click)="moveRight()" class="btn-right"></button>
       </div>
 
       <div class="items">
 
-        <drag-scroll #nav>
-          <div *ngFor="let item of sliderItems" drag-scroll-item class="item">
+        <drag-scroll #nav (indexChanged)="onIndexChanged($event)" (reachesLeftBound)="onReachesLeftBound()" (reachesRightBound)="onReachesRightBound()">
+          <div *ngFor="let item of sliderItemsMen" drag-scroll-item class="item">
             <div class="top">
               <div class="size">{{ item.size }}</div>
               <div class="color">{{ item.color }}</div>
             </div>
             
-            <div class="img"><img src="{{item.image}}" alt="photo"></div>
+            <div class="img"><img src="{{ item.image }}" alt="photo"></div>
 
             <div class="bottom">
               <div class="name">{{ item.name }}</div>
@@ -82,7 +88,7 @@
 
     <div>
 
-      <div class="items-count__w">
+      <div class="items-counter__w">
         <div>1 / 5</div>
       </div>
 
@@ -94,13 +100,13 @@
       <div class="items">
 
         <drag-scroll #nav>
-          <div *ngFor="let item of sliderItems" drag-scroll-item class="item">
+          <div *ngFor="let item of sliderItemsWomen" drag-scroll-item class="item">
             <div class="top">
               <div class="size">{{ item.size }}</div>
               <div class="color">{{ item.color }}</div>
             </div>
             
-            <div class="img"><img src="../assets/w-giacket.png" alt="photo"></div>
+            <div class="img"><img src="{{ item.image }}" alt="photo"></div>
 
             <div class="bottom">
               <div class="name">{{ item.name }}</div>
