@@ -1,37 +1,56 @@
 [
     {
+      "id": "ch-1",
       "size": "size",
       "color": "",
       "name": "shorts",
       "price": 35,
-      "image": "../ch-shorts.jpg"
+      "image": "../assets/ch-shorts.jpg",
+      "desc": "some text"
     },
     {
+      "id": "ch-2",
       "size": "size",
       "color": "",
       "name": "panama hat",
       "price": 15,
-      "image": "../ch-panama.png"
+      "image": "../assets/ch-panama.png",
+      "desc": "some text"
     },
     {
+      "id": "ch-3",
       "size": "size",
       "color": "color",
       "name": "t-shirt",
       "price": 12,
-      "image": "../ch-t-shirt.png"
+      "image": "../assets/ch-t-shirt.png",
+      "desc": "some text"
     },
     {
+      "id": "ch-4",
       "size": "size",
       "color": "",
       "name": "shoes",
       "price": 30,
-      "image": "../ch-shoes.png"
+      "image": "../assets/ch-shoes.png",
+      "desc": "some text"
     },
     {
+      "id": "ch-5",
       "size": "size",
       "color": "color",
       "name": "glasses",
       "price": 9.99,
-      "image": "../ch-glasses.png"
+      "image": "../assets/ch-glasses.png",
+      "desc": "some text"
+    },
+    {
+      "id": "ch-6",
+      "size": "size",
+      "color": "",
+      "name": "shoes",
+      "price": 30,
+      "image": "../assets/ch-shoes.png",
+      "desc": "some text"
     }
 ]

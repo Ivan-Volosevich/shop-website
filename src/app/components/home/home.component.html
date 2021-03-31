@@ -1,0 +1,40 @@
+<div class="hero">
+    <h1>Our clothing , your comfort</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <div class="scroll">
+      <a href="#filter"><img src="../../../assets/chevron.png" alt="chevron"></a>
+    </div>
+</div>
+
+<div id="filter" class="filter">
+    <div class="filter-content">
+      <label>
+        <input type="checkbox" class="custom-checkbox" [(ngModel)]="isMenVisible"> men
+      </label>
+
+      <label>
+        <input type="checkbox" class="custom-checkbox" [(ngModel)]="isWomenVisible"> women
+      </label>
+
+      <label>
+        <input type="checkbox" class="custom-checkbox" [(ngModel)]="isChildrenVisible"> children
+      </label>
+    </div>
+    
+    <div>
+      <button (click)="seeAllProducts()">see all products</button>
+    </div>
+</div>
+
+<div class="catalog">
+    <app-slider *ngIf="isMenVisible" [header]="'men (' +menSlides.length+ ')'" [slides]="menSlides"></app-slider>
+
+    <app-slider *ngIf="isWomenVisible" [header]="'women (' +womenSlides.length+ ')'" [slides]="womenSlides"></app-slider>
+
+    <app-slider *ngIf="isChildrenVisible" [header]="'children (' +childrenSlides.length+ ')'" [slides]="childrenSlides"></app-slider>
+  </div>
+
+  <div class="about">
+    <h3>About us</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+  </div>

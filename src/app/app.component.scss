@@ -1,7 +1,7 @@
 header {
     display: flex;
     justify-content: space-between;
-    margin: 50px 64px;
+    padding: 50px 64px;
     position: absolute;
     top: 0;
     right: 0;
@@ -30,103 +30,7 @@ header {
     }
 }
 
-.hero {
-    background-image: url('../assets/bg.png');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: #fff;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-
-    h1 {
-        max-width: 800px;
-        font-size: 60px;
-    }
-
-    p {
-        max-width: 586px;
-        font-size: 20px;
-        line-height: 1.6;
-    }
-
-    .scroll {
-        position: absolute;
-        bottom: 50px;
-    }
-}
-
-.filter {
-    text-transform: uppercase;
-    display: flex;
-    justify-content: space-between;
-    background-color: #f5f6f7;
-    padding: 46px 95px;
-    max-height: 142px;
-
-    div {
-        display: flex;
-        margin: 15px 0;
-        // input{
-        //     border: 1px solid #aa9b77;
-        // }
-
-        p {
-            margin: 0 40px 0 10px;
-        }
-    }
-
-    button {
-        text-transform: uppercase;
-        border: none;
-        width: 200px;
-        height: 50px;
-        background-color: #aa9b77;
-        color: #fff;
-        cursor: pointer;
-    }
-}
-
-.catalog {
-    padding-bottom: 130px;
-    padding-top: 50px;
-}
-
-.about{
-    background-color: #aa9b77;
-    height: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-
-    h3 {
-        text-transform: uppercase;
-        color: #837659;
-        background-color: #aa9b77;
-        position: relative;
-        top: 28px;
-        padding: 0 13px;
-        margin: 0;
-        font-size: 20px;
-    }
-
-    p {
-        color: #424242;
-        padding: 90px 120px;
-        border: 2px solid #837659;
-        max-width: 710px;
-        font-size: 16px;
-        font-weight: bold;
-    }
-}
-
-.footer {
+footer {
     color: #fff;
     text-transform: uppercase;
 

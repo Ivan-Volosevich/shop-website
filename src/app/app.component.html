@@ -14,49 +14,9 @@
     </nav>
   </header>
 
-  <div class="hero">
-    <h1>Our clothing , your comfort</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    <div class="scroll">
-      <a href="#filter"><img src="../assets/chevron.png" alt="chevron"></a>
-    </div>
-  </div>
+  <router-outlet></router-outlet>
 
-  <div id="filter" class="filter">
-    <div>
-      <label>
-        <input type="checkbox" class="custom-checkbox" checked ng-model="valMen" ng-true-value="true" ng-false-value="false">
-      </label>
-      <p>men</p>
-
-      <label>
-        <input type="checkbox" class="custom-checkbox" checked>
-      </label>
-      <p>women</p>
-
-      <label>
-        <input type="checkbox" class="custom-checkbox" checked>
-      </label>
-      <p>children</p>
-    </div>
-
-      <button>see all products</button>
-  </div>
-
-  <div class="catalog">
-    <app-slider header="men" [slides]="menSlides" ng-show="valMen"></app-slider>
-
-    <app-slider header="women" [slides]="womenSlides"></app-slider>
-
-    <app-slider header="children" [slides]="childrenSlides"></app-slider>
-  </div>
-
-  <div class="about">
-    <h3>About us</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
-  </div>
-
-  <div class="footer">
+  <footer>
     <div class="twitter-text">
       <div class="img"><img src="../assets/logo-twitter.png" alt="logo-twitter"></div>
       <p>“ E-commerce psd theme available ”</p>
@@ -78,6 +38,6 @@
         <p>Design by gianluca cosetta</p>
       </div>
     </div>
-  </div>
+  </footer>
 
 </div>

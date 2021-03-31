@@ -1,37 +1,65 @@
 [
     {
+      "id": "w-1",
       "size": "size",
       "color": "",
       "name": "giacket",
       "price": 5,
-      "image": "../w-giacket.png"
+      "image": "../assets/w-giacket.png",
+      "desc": "some text"
     },
     {
+      "id": "w-2",
       "size": "size",
       "color": "",
       "name": "trekking shoes",
       "price": 30,
-      "image": "../w-track-shoes.png"
+      "image": "../assets/w-track-shoes.png",
+      "desc": "some text"
     },
     {
+      "id": "w-3",
       "size": "size",
       "color": "color",
       "name": "t-shirt",
       "price": 60,
-      "image": "../w-t-shirt.png"
+      "image": "../assets/w-t-shirt.png",
+      "desc": "some text"
     },
     {
+      "id": "w-4",
       "size": "size",
       "color": "",
       "name": "hat",
       "price": 15,
-      "image": "../w-giacket.png"
+      "image": "../assets/w-giacket.png",
+      "desc": "some text"
     },
     {
+      "id": "w-5",
       "size": "size",
       "color": "color",
       "name": "scarf",
       "price": 12,
-      "image": "../w-t-shirt.png"
+      "image": "../assets/w-t-shirt.png",
+      "desc": "some text"
+    },
+    {
+      "id": "w-6",
+      "size": "size",
+      "color": "",
+      "name": "hat",
+      "price": 15,
+      "image": "../assets/w-giacket.png",
+      "desc": "some text"
+    },
+    {
+      "id": "w-7",
+      "size": "size",
+      "color": "",
+      "name": "hat",
+      "price": 15,
+      "image": "../assets/w-giacket.png",
+      "desc": "some text"
     }
 ]

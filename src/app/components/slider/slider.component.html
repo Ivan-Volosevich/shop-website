@@ -1,5 +1,5 @@
 <div class="header">
-    <div class="header-text">{{ header }} ({{ itemsAmount }})</div>
+    <div class="header-text">{{ header }}</div>
 </div>
 
 <div>
@@ -12,17 +12,19 @@
 
     <drag-scroll #nav [scrollbar-hidden]="true">
     <div *ngFor="let item of slides" drag-scroll-item class="item">
-        <div class="top">
-        <div class="size">{{ item.size }}</div>
-        <div class="color">{{ item.color }}</div>
-        </div>
-        
-        <div class="img"><img src="{{ item.image }}" alt="photo"></div>
+        <a [routerLink]="[item.id]">
+            <div class="top">
+            <div class="size">{{ item.size }}</div>
+            <div class="color">{{ item.color }}</div>
+            </div>
+            
+            <div class="img"><img src="{{ item.image }}" alt="photo"></div>
 
-        <div class="bottom">
-        <div class="name">{{ item.name }}</div>
-        <div class="price">{{ item.price | currency:"EUR" }}</div>
-        </div>
+            <div class="bottom">
+            <div class="name">{{ item.name }}</div>
+            <div class="price">{{ item.price | currency:"EUR" }}</div>
+            </div>
+        </a>
     </div>
     </drag-scroll>
     

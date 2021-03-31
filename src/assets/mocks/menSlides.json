@@ -1,37 +1,47 @@
 [
     {
+      "id": "m-1",
       "size": "size",
       "color": "color",
       "name": "t-shirt",
       "price": 5,
-      "image": "../t-shirt.png"
+      "image": "../assets/t-shirt.png",
+      "desc": "some text"
     },
     {
+      "id": "m-2",
       "size": "size",
       "color": "",
       "name": "Pants FORCLAZ",
       "price": 30,
-      "image": "../pants.png"
+      "image": "../assets/pants.png",
+      "desc": "some text"
     },
     {
+      "id": "m-3",
       "size": "10litri",
       "color": "",
       "name": "backpack",
       "price": 60,
-      "image": "../backpack.png"
+      "image": "../assets/backpack.png",
+      "desc": "some text"
     },
     {
+      "id": "m-4",
       "size": "size",
       "color": "",
       "name": "hat",
       "price": 15,
-      "image": "../pants.png"
+      "image": "../assets/pants.png",
+      "desc": "some text"
     },
     {
+      "id": "m-5",
       "size": "size",
       "color": "color",
       "name": "scarf",
       "price": 12,
-      "image": "../scarf.png"
+      "image": "../assets/scarf.png",
+      "desc": "some text"
     }
 ]

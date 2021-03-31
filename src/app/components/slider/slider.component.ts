@@ -13,10 +13,7 @@ export class SliderComponent implements OnInit {
 
   @ViewChild('nav', { read: DragScrollComponent }) ds!: DragScrollComponent;
 
-  itemsAmount: number = 0;
-
   ngOnInit() {
-    this.itemsAmount = this.slides.length;
   }
 
   moveLeft() {
