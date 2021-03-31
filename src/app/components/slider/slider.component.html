@@ -10,8 +10,8 @@
 
 <div class="items">
 
-    <drag-scroll #nav>
-    <div *ngFor="let item of sliderItemsMen" drag-scroll-item class="item">
+    <drag-scroll #nav [scrollbar-hidden]="true">
+    <div *ngFor="let item of slides" drag-scroll-item class="item">
         <div class="top">
         <div class="size">{{ item.size }}</div>
         <div class="color">{{ item.color }}</div>

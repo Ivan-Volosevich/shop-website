@@ -1,0 +1,37 @@
+[
+    {
+      "size": "size",
+      "color": "color",
+      "name": "t-shirt",
+      "price": 5,
+      "image": "../t-shirt.png"
+    },
+    {
+      "size": "size",
+      "color": "",
+      "name": "Pants FORCLAZ",
+      "price": 30,
+      "image": "../pants.png"
+    },
+    {
+      "size": "10litri",
+      "color": "",
+      "name": "backpack",
+      "price": 60,
+      "image": "../backpack.png"
+    },
+    {
+      "size": "size",
+      "color": "",
+      "name": "hat",
+      "price": 15,
+      "image": "../pants.png"
+    },
+    {
+      "size": "size",
+      "color": "color",
+      "name": "scarf",
+      "price": 12,
+      "image": "../scarf.png"
+    }
+]

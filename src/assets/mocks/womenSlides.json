@@ -1,0 +1,37 @@
+[
+    {
+      "size": "size",
+      "color": "",
+      "name": "giacket",
+      "price": 5,
+      "image": "../w-giacket.png"
+    },
+    {
+      "size": "size",
+      "color": "",
+      "name": "trekking shoes",
+      "price": 30,
+      "image": "../w-track-shoes.png"
+    },
+    {
+      "size": "size",
+      "color": "color",
+      "name": "t-shirt",
+      "price": 60,
+      "image": "../w-t-shirt.png"
+    },
+    {
+      "size": "size",
+      "color": "",
+      "name": "hat",
+      "price": 15,
+      "image": "../w-giacket.png"
+    },
+    {
+      "size": "size",
+      "color": "color",
+      "name": "scarf",
+      "price": 12,
+      "image": "../w-t-shirt.png"
+    }
+]

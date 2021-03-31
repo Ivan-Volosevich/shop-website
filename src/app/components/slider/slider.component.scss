@@ -61,13 +61,15 @@
     margin: 0 100px;
 
     drag-scroll{
-        :first-child {
-            margin-left: 0;
-        }
+        height: 400px;
 
-        :last-child {
-            margin-right: 0;
-        }
+        // :first-child {
+        //     margin-left: 0;
+        // }
+
+        // :last-child {
+        //     margin-right: 0;
+        // }
     }
 
     .item {
@@ -88,11 +90,16 @@
         }
 
         .img {
-            padding: 0px 70px;
+            text-align: center;
+            height: 270px;
+            padding: 0px 20px;
 
             img {
-                height: 180px;
-                max-width: 152px;
+                display: block;
+                height: auto;
+                width: auto;
+                max-height: 100%;
+                margin: auto;
             }
         }
 
@@ -110,4 +117,9 @@
             border: 7px solid #a99b77;
         }
     }
+}
+
+::ng-deep .drag-scroll-content {
+    margin-left: -30px;
+    margin-right: -30px;
 }

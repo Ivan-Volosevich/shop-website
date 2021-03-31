@@ -1,0 +1,37 @@
+[
+    {
+      "size": "size",
+      "color": "",
+      "name": "shorts",
+      "price": 35,
+      "image": "../ch-shorts.jpg"
+    },
+    {
+      "size": "size",
+      "color": "",
+      "name": "panama hat",
+      "price": 15,
+      "image": "../ch-panama.png"
+    },
+    {
+      "size": "size",
+      "color": "color",
+      "name": "t-shirt",
+      "price": 12,
+      "image": "../ch-t-shirt.png"
+    },
+    {
+      "size": "size",
+      "color": "",
+      "name": "shoes",
+      "price": 30,
+      "image": "../ch-shoes.png"
+    },
+    {
+      "size": "size",
+      "color": "color",
+      "name": "glasses",
+      "price": 9.99,
+      "image": "../ch-glasses.png"
+    }
+]

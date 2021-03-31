@@ -25,7 +25,7 @@
   <div id="filter" class="filter">
     <div>
       <label>
-        <input type="checkbox" class="custom-checkbox" checked>
+        <input type="checkbox" class="custom-checkbox" checked ng-model="valMen" ng-true-value="true" ng-false-value="false">
       </label>
       <p>men</p>
 
@@ -35,7 +35,7 @@
       <p>women</p>
 
       <label>
-        <input type="checkbox" class="custom-checkbox">
+        <input type="checkbox" class="custom-checkbox" checked>
       </label>
       <p>children</p>
     </div>
@@ -44,9 +44,11 @@
   </div>
 
   <div class="catalog">
-    <app-slider header='men'></app-slider>
+    <app-slider header="men" [slides]="menSlides" ng-show="valMen"></app-slider>
 
-    <app-slider header='women'></app-slider>
+    <app-slider header="women" [slides]="womenSlides"></app-slider>
+
+    <app-slider header="children" [slides]="childrenSlides"></app-slider>
   </div>
 
   <div class="about">
