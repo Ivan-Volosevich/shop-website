@@ -52,30 +52,11 @@ export class AppComponent {
 
   itemsAmount: number = 0;  
   currentNumber: number = 0;
-  leftButtonVisible: boolean = true;
-  rightButtonVisible: boolean = true;
+
 
   ngOnInit() {
     this.itemsAmount = this.sliderItemsMen.length;
   }
-
-  ngAfterViewInit() {
-    setTimeout(() => { 
-      this.ds.moveTo(0);
-    }, 1000);
-  }
-
-  onReachesLeftBound() {
-    this.leftButtonVisible = false;
-    this.rightButtonVisible = true;
-  }
-
-  onReachesRightBound() {
-    this.rightButtonVisible = false;
-    this.leftButtonVisible = true;
-  }
-
-
 
   moveLeft() {
     this.ds.moveLeft();

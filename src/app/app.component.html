@@ -45,23 +45,18 @@
 
   <div class="catalog">
     <div class="header">
-      <p>men</p>
+      <p>men ({{ itemsAmount }})</p>
     </div>
 
     <div>
-
-      <div class="items-counter">
-        {{ currentNumber }} / {{  itemsAmount  }}
-      </div>
-
       <div class="items-btn">
-        <button *ngIf="leftButtonVisible" (click)="moveLeft()" class="btn-left"></button>
-        <button *ngIf="rightButtonVisible" (click)="moveRight()" class="btn-right"></button>
+        <button (click)="moveLeft()" class="btn-left"></button>
+        <button (click)="moveRight()" class="btn-right"></button>
       </div>
 
       <div class="items">
 
-        <drag-scroll #nav (indexChanged)="onIndexChanged($event)" (reachesLeftBound)="onReachesLeftBound()" (reachesRightBound)="onReachesRightBound()">
+        <drag-scroll #nav (indexChanged)="onIndexChanged($event)">
           <div *ngFor="let item of sliderItemsMen" drag-scroll-item class="item">
             <div class="top">
               <div class="size">{{ item.size }}</div>
