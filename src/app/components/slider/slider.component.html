@@ -1,0 +1,30 @@
+<div class="header">
+    <div class="header-text">{{ header }} ({{ itemsAmount }})</div>
+</div>
+
+<div>
+<div class="items-btn">
+    <button (click)="moveLeft()" class="btn-left"></button>
+    <button (click)="moveRight()" class="btn-right"></button>
+</div>
+
+<div class="items">
+
+    <drag-scroll #nav>
+    <div *ngFor="let item of sliderItemsMen" drag-scroll-item class="item">
+        <div class="top">
+        <div class="size">{{ item.size }}</div>
+        <div class="color">{{ item.color }}</div>
+        </div>
+        
+        <div class="img"><img src="{{ item.image }}" alt="photo"></div>
+
+        <div class="bottom">
+        <div class="name">{{ item.name }}</div>
+        <div class="price">{{ item.price | currency:"EUR" }}</div>
+        </div>
+    </div>
+    </drag-scroll>
+    
+</div>
+</div>

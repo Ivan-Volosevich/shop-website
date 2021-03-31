@@ -5,10 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { DragScrollModule  } from 'ngx-drag-scroll';
+import { SliderComponent } from './components/slider/slider.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SliderComponent
   ],
   imports: [
     BrowserModule,
