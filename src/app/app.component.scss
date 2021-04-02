@@ -7,6 +7,7 @@ header {
     right: 0;
     left: 0;
     color: #fff;
+    background: rgba(41, 80, 131, 0.3);
 
     .logo {
         margin: 5px 0px;
@@ -24,6 +25,20 @@ header {
                 a {
                     text-decoration: none;
                     color: #fff;
+                }
+
+                .quantity {
+                    position: absolute;
+                    top: 58px;
+                    right: 70px;
+                    background-color: #aa9b77;
+                    height: 15px;
+                    width: 15px;
+                    border-radius: 50%;
+                    text-align: center;
+                    font-size: 11px;
+                    font-weight: bold;
+                    color: #000;
                 }
             }
         }

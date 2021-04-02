@@ -6,7 +6,7 @@
       "name": "giacket",
       "price": 5,
       "image": "../assets/w-giacket.png",
-      "desc": "some text"
+      "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor sit tenetur rem libero id quaerat ad doloribus in cum."
     },
     {
       "id": "w-2",
@@ -15,7 +15,7 @@
       "name": "trekking shoes",
       "price": 30,
       "image": "../assets/w-track-shoes.png",
-      "desc": "some text"
+      "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet, est. Officia."
     },
     {
       "id": "w-3",
@@ -24,7 +24,7 @@
       "name": "t-shirt",
       "price": 60,
       "image": "../assets/w-t-shirt.png",
-      "desc": "some text"
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta laborum blanditiis odit aut officiis. Quibusdam error quasi inventore ut blanditiis ipsa a numquam veritatis!"
     },
     {
       "id": "w-4",
@@ -33,7 +33,7 @@
       "name": "hat",
       "price": 15,
       "image": "../assets/w-giacket.png",
-      "desc": "some text"
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto placeat magnam neque! Repudiandae, laborum?"
     },
     {
       "id": "w-5",
@@ -42,7 +42,7 @@
       "name": "scarf",
       "price": 12,
       "image": "../assets/w-t-shirt.png",
-      "desc": "some text"
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente deserunt, mollitia consequatur aperiam, provident numquam neque facilis impedit aliquam tempore, ipsam natus."
     },
     {
       "id": "w-6",
@@ -51,7 +51,7 @@
       "name": "hat",
       "price": 15,
       "image": "../assets/w-giacket.png",
-      "desc": "some text"
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero ab dolores totam repellendus odit voluptates, maiores possimus?"
     },
     {
       "id": "w-7",
@@ -60,6 +60,6 @@
       "name": "hat",
       "price": 15,
       "image": "../assets/w-giacket.png",
-      "desc": "some text"
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. At magnam fugiat similique quas ipsa odio nemo natus sed explicabo minima. Perspiciatis aperiam sunt repellat sit asperiores quisquam soluta exercitationem!"
     }
 ]

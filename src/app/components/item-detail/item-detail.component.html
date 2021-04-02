@@ -1,3 +1,22 @@
-<div *ngIf="details">
-    {{ details.name }}
+<div *ngIf="details" class="item">
+    <div class="header">
+        <div class="name">{{ details.name }}</div>
+        <div class="code">Vendor code: {{ details.id }}</div>
+    </div>
+
+    <div class="content">
+        <div class="img">
+            <img src="{{ details.image }}" alt="photo">
+        </div>
+
+        <div class="description">
+            <div><span class="price">{{ details.price | currency:'EUR'}}</span></div>
+            <div><span>Color:</span> {{ details.color }}</div>
+            <div><span>Size:</span> {{ details.size }}</div>
+            <button (click)="increment()" class="btn-add">Add to cart</button>
+            <div>{{ clicks }}</div>
+            <div><span>Description:</span> {{ details.desc }}</div>
+
+        </div>
+    </div>
 </div>

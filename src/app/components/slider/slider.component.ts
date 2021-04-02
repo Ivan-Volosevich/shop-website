@@ -13,8 +13,7 @@ export class SliderComponent implements OnInit {
 
   @ViewChild('nav', { read: DragScrollComponent }) ds!: DragScrollComponent;
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   moveLeft() {
     this.ds.moveLeft();

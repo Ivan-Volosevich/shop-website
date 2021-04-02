@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Input, Output } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CatalogService } from '../../services/catalog/catalog.service';
 
@@ -12,6 +12,8 @@ export class ItemDetailComponent implements OnInit {
   id!: string;
   details!: any;
 
+  clicks: number = 0;
+
   constructor(
     private route: ActivatedRoute,
     private catalogService: CatalogService)
@@ -23,5 +25,10 @@ export class ItemDetailComponent implements OnInit {
       this.details = data;
     });
   }
+
+  increment() {
+    this.clicks++;
+  }
+
 
 }
