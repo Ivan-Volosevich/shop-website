@@ -9,7 +9,7 @@ import { CatalogService } from '../catalog/catalog.service';
 export class CartService {
   items: any[] = [];
 
-  @Input() id!: string;
+  // @Input() id!: string;
   @Input() details!: any;
 
   constructor(

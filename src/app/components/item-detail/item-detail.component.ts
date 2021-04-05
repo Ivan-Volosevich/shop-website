@@ -33,10 +33,4 @@ export class ItemDetailComponent implements OnInit {
     window.alert('Your product has been added to the cart!');
     this.cartService.addToCart(details);
   }
-
-  increment() {
-    this.clicks++;
-  }
-
-
 }

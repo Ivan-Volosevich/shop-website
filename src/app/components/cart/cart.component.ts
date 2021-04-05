@@ -12,8 +12,8 @@ import { CartService } from '../../services/cart/cart.service';
 export class CartComponent implements OnInit {
   items: any;
 
-  @Input() id!: string;
-  @Input() details!: any;
+  id!: string;
+  details!: any;
   
 
   constructor(
