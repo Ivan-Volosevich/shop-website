@@ -1,6 +1,8 @@
 import { Component, OnInit, EventEmitter, Input, Output } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+
 import { CatalogService } from '../../services/catalog/catalog.service';
+import { CartService } from '../../services/cart/cart.service';
 
 @Component({
   selector: 'app-item-detail',
@@ -16,7 +18,8 @@ export class ItemDetailComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private catalogService: CatalogService)
+    private catalogService: CatalogService,
+    private cartService: CartService)
     { }
 
   ngOnInit(): void {
@@ -24,6 +27,11 @@ export class ItemDetailComponent implements OnInit {
     this.catalogService.searchById(this.id).subscribe((data) => {
       this.details = data;
     });
+  }
+
+  addToCart(details: any) {
+    window.alert('Your product has been added to the cart!');
+    this.cartService.addToCart(details);
   }
 
   increment() {

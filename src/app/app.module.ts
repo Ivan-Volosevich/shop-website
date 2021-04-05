@@ -10,13 +10,15 @@ import { DragScrollModule  } from 'ngx-drag-scroll';
 import { SliderComponent } from './components/slider/slider.component';
 import { HomeComponent } from './components/home/home.component';
 import { ItemDetailComponent } from './components/item-detail/item-detail.component';
+import { CartComponent } from './components/cart/cart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SliderComponent,
     HomeComponent,
-    ItemDetailComponent
+    ItemDetailComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
