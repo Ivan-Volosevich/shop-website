@@ -10,6 +10,7 @@ import { SliderComponent } from './components/slider/slider.component';
 import { HomeComponent } from './components/home/home.component';
 import { ItemDetailComponent } from './components/item-detail/item-detail.component';
 import { CartComponent } from './components/cart/cart.component';
+import { RedDirective } from './derectives/red.directive';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { CartComponent } from './components/cart/cart.component';
     SliderComponent,
     HomeComponent,
     ItemDetailComponent,
-    CartComponent
+    CartComponent,
+    RedDirective
   ],
   imports: [
     BrowserModule,
