@@ -14,12 +14,11 @@ export class ItemDetailComponent implements OnInit {
   id!: string;
   details!: any;
 
-  clicks: number = 0;
 
   constructor(
     private route: ActivatedRoute,
     private catalogService: CatalogService,
-    private cartService: CartService)
+    private cart: CartService)
     { }
 
   ngOnInit(): void {
@@ -31,6 +30,6 @@ export class ItemDetailComponent implements OnInit {
 
   addToCart(details: any) {
     window.alert('Your product has been added to the cart!');
-    this.cartService.addToCart(details);
+    this.cart.setItemsInCart(details);
   }
 }

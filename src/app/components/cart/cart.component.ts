@@ -10,25 +10,17 @@ import { CartService } from '../../services/cart/cart.service';
   styleUrls: ['./cart.component.scss']
 })
 export class CartComponent implements OnInit {
-  items: any;
-
-  id!: string;
-  details!: any;
+  items: any[] = [];
   
 
   constructor(
     private route: ActivatedRoute,
     private catalogService: CatalogService,
-    private cartService: CartService
-  ) {
-    this.items = this.cartService.getItems();
-  }
+    private cart: CartService
+  ) {  }
 
   ngOnInit(): void {
-    this.id = this.route.snapshot.paramMap.get('id') as string;
-    this.catalogService.searchById(this.id).subscribe((data) => {
-      this.details = data;
-    });
+    this.items = this.cart.getCartItems();
   }
 
 }

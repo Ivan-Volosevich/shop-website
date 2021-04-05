@@ -1,5 +1,6 @@
-import { Injectable, Input } from '@angular/core';
+import { Injectable, Input, Output } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { BehaviorSubject } from 'rxjs';
 
 import { CatalogService } from '../catalog/catalog.service';
 
@@ -7,26 +8,38 @@ import { CatalogService } from '../catalog/catalog.service';
   providedIn: 'root'
 })
 export class CartService {
-  items: any[] = [];
 
-  // @Input() id!: string;
-  @Input() details!: any;
+  private items: any[] = [];
+  private itemsInCart: number = 0;
+  private itemsInCart$ = new BehaviorSubject<number>(0); // itemsInCartSubject = itemsInCart$ - наблюдение (поток, на который мы можем подписываться)
+
+  setItemsInCart(item: Object) {     // n - number
+    // if (n) {
+    //   this.itemsInCart = n;
+    // } else {
+      this.itemsInCart++;
+      this.items.push(item);
+    // }
+      this.itemsInCart$.next(this.itemsInCart);
+  }
+
+  getSubscription() {
+    return this.itemsInCart$;
+  }
+
+  getCartItems() {
+    return this.items;
+  }
+
 
   constructor(
     private http: HttpClient,
     private catalogService: CatalogService
   ) { }
 
-  addToCart(details: any) {
-    this.items.push(this.details);
-  }
-
-  getItems() {
-    return this.items;
-  }
-
-  clearCart() {
-    this.items = [];
-    return this.items;
-  }
+  // clearCart() {
+  //   this.items = [];
+  //   console.log('cart items clear', this.items);
+  //   return this.items;
+  // }
 }

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { CartService } from './services/cart/cart.service';
 
 @Component({
   selector: 'app-root',
@@ -8,12 +9,13 @@ import { Component } from '@angular/core';
 export class AppComponent{
   title = 'shop-website';
 
-  clicks: number = 0;
-  // ClickCounter = 0;
+  cartCounter: number = 0;
 
-  // addToCartItem() {
-  //   this.ClickCounter = clicks;
-  //   console.log(clicks);
-  // }
+  constructor(private cart: CartService) {}
 
+  ngOnInit() {
+    this.cart.getSubscription().subscribe((data) => {
+      this.cartCounter = data;
+    })
+  }
 }
