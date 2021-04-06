@@ -29,7 +29,6 @@ export class ItemDetailComponent implements OnInit {
   }
 
   addToCart(details: any) {
-    window.alert('Your product has been added to the cart!');
     this.cart.setItemsInCart(details);
   }
 }

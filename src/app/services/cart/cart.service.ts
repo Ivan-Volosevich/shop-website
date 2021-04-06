@@ -10,16 +10,12 @@ import { CatalogService } from '../catalog/catalog.service';
 export class CartService {
 
   private items: any[] = [];
-  private itemsInCart: number = 0;
-  private itemsInCart$ = new BehaviorSubject<number>(0); // itemsInCartSubject = itemsInCart$ - наблюдение (поток, на который мы можем подписываться)
+  itemsInCart: number = 0;
+  itemsInCart$ = new BehaviorSubject<number>(0); // itemsInCartSubject = itemsInCart$ - наблюдение (поток, на который мы можем подписываться)
 
   setItemsInCart(item: Object) {     // n - number
-    // if (n) {
-    //   this.itemsInCart = n;
-    // } else {
       this.itemsInCart++;
       this.items.push(item);
-    // }
       this.itemsInCart$.next(this.itemsInCart);
   }
 

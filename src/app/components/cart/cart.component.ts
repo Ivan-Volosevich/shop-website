@@ -11,6 +11,7 @@ import { CartService } from '../../services/cart/cart.service';
 })
 export class CartComponent implements OnInit {
   items: any[] = [];
+  counter: number = 0;
   
 
   constructor(
@@ -21,6 +22,16 @@ export class CartComponent implements OnInit {
 
   ngOnInit(): void {
     this.items = this.cart.getCartItems();
+    
+    this.counter = this.cart.itemsInCart;
+  }
+  
+  decrement() {
+    this.counter--;
+  }  
+
+  increment() {
+    this.counter++;
   }
 
 }

@@ -1,4 +1,34 @@
 .cart {
     margin-top: 156px;
     padding: 50px;
+
+    .cart-item {
+        display: flex;
+
+        // &::after {
+        //     content: '';
+        //     display: block;
+        //     width: 100%;
+        //     height: 2px;
+        //     background-color: #cccccc;
+        //     opacity: 0.5;
+        // }
+
+        .img {
+            max-width: 100px;
+            max-height: 100px;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        
+        ul {
+
+            li {
+                list-style: none;
+            }
+        }
+    }
 }
