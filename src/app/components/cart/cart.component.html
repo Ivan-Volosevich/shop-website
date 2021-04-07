@@ -1,15 +1,31 @@
-<div class="cart" *ngIf='items'>
+<div class="cart">
     <h3>Cart</h3>
 
     <div class="cart-item" *ngFor="let item of items">
-        <div class="img"><img src="{{ item.image }}" alt="photo"></div>
-        <ul>
-            <li>{{ item.name }}</li>
-            <li>{{ item.price | currency:'EUR'}}</li>
-        </ul>
+        <div class="cart-item--desc">
+            <div class="img"><img src="{{ item.image }}" alt="photo"></div>
+            <ul>
+                <li>{{ item.name }}</li>
+                <li>{{ item.price | currency:'EUR'}}</li>
+            </ul>
+        </div>
 
-        <button (click)="decrement()">-</button>
-        <input type="text" placeholder="{{ counter }}">
-        <button (click)="increment()">+</button>
+        <div class="cart-item--quantity">
+            <button (click)="decrement(item.id)">-</button>
+            <!-- <label>
+                <input type="text" placeholder=" -->
+                {{ item.amount }}
+                <!-- ">
+            </label> -->
+            <button (click)="increment(item.id)">+</button>
+
+            <div class="sum-item">{{ item.amount * item.price | currency:'EUR' }}</div>
+        </div>
+    </div>
+
+    <div class="sum-items">
+        <label>
+            <input placeholder="">
+        </label>
     </div>
 </div>
