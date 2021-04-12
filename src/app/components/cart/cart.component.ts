@@ -58,8 +58,13 @@ export class CartComponent implements OnInit {
     });
   }  
 
-  increment(item: object) {
-    this.counter++;
+  increment(id: string) {
+    this.items = this.items.map((el) => {
+      if (el.id === id) {
+        el.amount++;
+      }
+      return el;
+    });
   }
 
 }
