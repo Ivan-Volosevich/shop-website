@@ -3,20 +3,39 @@ import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject } from 'rxjs';
 
 import { CatalogService } from '../catalog/catalog.service';
+import { Product } from '../../interfaces/product';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CartService {
 
-  private items: any[] = [];
-  itemsInCart: number = 0;
-  itemsInCart$ = new BehaviorSubject<number>(0); // itemsInCartSubject = itemsInCart$ - наблюдение (поток, на который мы можем подписываться)
+  private items: Array<Product> = JSON.parse(localStorage.getItem("items") as string) || [];
+  private itemsInCart: number = this.calcItemsInCart(this.items);
+  private itemsInCart$ = new BehaviorSubject<number>(this.itemsInCart); // itemsInCartSubject = itemsInCart$ - наблюдение (поток, на который мы можем подписываться)
 
-  setItemsInCart(item: Object) {     // n - number
-      this.itemsInCart++;
-      this.items.push(item);
+  addItemInCart(item: Product) {     // n - number
+
+      for (let i of this.items) {
+        if (i.id === item.id) {
+          i.amount ? i.amount++ : i.amount = 1;
+        } else {
+          this.items.push(item);
+        }
+      } 
+      if (this.items.length === 0) {
+        this.items.push(item);
+      }
+      this.itemsInCart = this.calcItemsInCart(this.items);
+      localStorage.setItem("items", JSON.stringify(this.items));
       this.itemsInCart$.next(this.itemsInCart);
+  }
+
+  setItemsInCart(items: Array<Product>) {
+    this.items = [...items];
+    this.itemsInCart = this.items.length;
+    localStorage.setItem('items', JSON.stringify(this.items));
+    this.itemsInCart$.next(this.itemsInCart);
   }
 
   getSubscription() {
@@ -25,6 +44,14 @@ export class CartService {
 
   getCartItems() {
     return this.items;
+  }
+
+  private calcItemsInCart(items: any[]): number {
+    let result = items.reduce((t, v) => {
+      return v.amount ? t + v.amount : t + 1;
+    }, 0);
+
+    return result;
   }
 
 

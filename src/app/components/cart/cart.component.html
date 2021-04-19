@@ -1,7 +1,7 @@
 <div class="cart">
     <h3>Cart</h3>
 
-    <div class="cart-item" *ngFor="let item of items">
+    <div class="cart-item" *ngFor="let item of items" >
         <div class="cart-item--desc">
             <div class="img"><img src="{{ item.image }}" alt="photo"></div>
             <ul>
@@ -11,7 +11,7 @@
         </div>
 
         <div class="cart-item--quantity">
-            <button (click)="decrement(item.id)">-</button>
+            <button *ngIf="item.amount > 0" (click)="decrement(item.id)">-</button>
             <!-- <label>
                 <input type="text" placeholder=" -->
                 {{ item.amount }}

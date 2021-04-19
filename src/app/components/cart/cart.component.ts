@@ -21,29 +21,10 @@ export class CartComponent implements OnInit {
   ) {  }
 
   ngOnInit(): void {
-    this.items = this.groupItems(this.cart.getCartItems());
-
-    
-    this.counter = this.cart.itemsInCart;
+    this.items = (this.cart.getCartItems());
   }
 
-  groupItems(arr: any[]): any[] {
-    const result: any[] = [];
-    const ids: any[] = [];
-    for (let item of arr) {
-      if (ids.includes(item.id)) {
-        result.forEach((el, i) => {
-          if (el.id === item.id) {
-            result[i].amount++
-          }
-        })
-      } else {
-        result.push({...item, amount: 1});
-        ids.push(item.id);
-      }
-    }
-    return result;
-  }
+
 
   sumOfItem() {
 
@@ -56,6 +37,7 @@ export class CartComponent implements OnInit {
       }
       return el;
     });
+    this.cart.setItemsInCart(this.items);
   }  
 
   increment(id: string) {
@@ -65,6 +47,7 @@ export class CartComponent implements OnInit {
       }
       return el;
     });
+    this.cart.setItemsInCart(this.items);
   }
 
 }
