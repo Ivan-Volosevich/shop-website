@@ -1,31 +1,54 @@
 <div class="cart">
-    <h3>Cart</h3>
+    <div class="cart-container">
+        <h3>Cart</h3>
 
-    <div class="cart-item" *ngFor="let item of items" >
-        <div class="cart-item--desc">
-            <div class="img"><img src="{{ item.image }}" alt="photo"></div>
-            <ul>
-                <li>{{ item.name }}</li>
-                <li>{{ item.price | currency:'EUR'}}</li>
-            </ul>
+        <div class="cart-item" *ngFor="let item of items" >
+            <div class="cart-item--desc">
+                <div class="img"><img src="{{ item.image }}" alt="photo"></div>
+                <ul>
+                    <li>{{ item.name }}</li>
+                    <li>{{ item.price | currency:'EUR'}}</li>
+                </ul>
+            </div>
+
+            <div class="cart-item--quantity">
+                <button *ngIf="item.amount > 0" (click)="decrement(item.id)">-</button>
+                <!-- <label>
+                    <input type="text" placeholder=" -->
+                    {{ item.amount }}
+                    <!-- ">
+                </label> -->
+                <button (click)="increment(item.id)">+</button>
+
+                <div class="sum-item">{{ item.amount * item.price | currency:'EUR' }}</div>
+            </div>
         </div>
 
-        <div class="cart-item--quantity">
-            <button *ngIf="item.amount > 0" (click)="decrement(item.id)">-</button>
-            <!-- <label>
-                <input type="text" placeholder=" -->
-                {{ item.amount }}
-                <!-- ">
-            </label> -->
-            <button (click)="increment(item.id)">+</button>
+        <!-- <div class="sum-items">
+            <label>
+                <input placeholder="">
+            </label>
+        </div> -->
+    </div>
 
-            <div class="sum-item">{{ item.amount * item.price | currency:'EUR' }}</div>
+    <form [formGroup]="orderForm" (ngSubmit)="onSubmit()">
+        <div>
+            <input type="text" formControlName="name">
+            <div class="error" *ngIf="orderForm.controls['name'].errors && orderForm.touched">Field is requiered</div>
+            <br>
+            <input type="text" formControlName="address">
+            <br>
+            <input type="radio" formControlName="paymentType" value="cash" id="cash">
+                <label for="cash">
+                    Cash
+                </label>
+            <br>
+            <input type="radio" formControlName="paymentType" value="card" id="card">
+                <label for="card">
+                    Card
+                </label>
         </div>
-    </div>
+        <button type="submit" [disabled]="!orderForm.valid">Submit</button>
+    </form>
 
-    <div class="sum-items">
-        <label>
-            <input placeholder="">
-        </label>
-    </div>
 </div>

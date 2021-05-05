@@ -16,16 +16,26 @@ export class CartService {
 
   addItemInCart(item: Product) {     // n - number
 
-      for (let i of this.items) {
-        if (i.id === item.id) {
-          i.amount ? i.amount++ : i.amount = 1;
-        } else {
-          this.items.push(item);
-        }
-      } 
       if (this.items.length === 0) {
+        item.amount = 1;
+        this.items.push(item);
+      } else {
+        for (let i of this.items) {
+          if (i.id == item.id) {
+            i.amount ? i.amount++ : i.amount = 1;
+          }
+        } 
+      }
+
+      let idsArray = this.items.map((item) => {
+        return item.id;
+      });
+      if (!idsArray.includes(item.id)) {
+        item.amount = 1;
         this.items.push(item);
       }
+
+      
       this.itemsInCart = this.calcItemsInCart(this.items);
       localStorage.setItem("items", JSON.stringify(this.items));
       this.itemsInCart$.next(this.itemsInCart);
