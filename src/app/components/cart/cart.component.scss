@@ -8,15 +8,6 @@
         justify-content: space-between;
         border: 1px solid #000;
 
-        // &::after {
-        //     content: '';
-        //     display: block;
-        //     width: 100%;
-        //     height: 2px;
-        //     background-color: #cccccc;
-        //     opacity: 0.5;
-        // }
-
         .cart-item--desc {
             display: flex;
 
@@ -66,6 +57,101 @@
     }
 
     form {
+        margin: 20px;
+
+        .form-body {
+            width: 600px;
+            height: 100%;
+            padding: 15px;
+            margin: auto;
+            text-align: center;
+            border: 8px outset #aa9b77;
+
+            p {
+                font-weight: bold;
+            }
+
+            input {
+                width: 280px;
+                height: 50px;
+                font-size: 24px;
+                border: 4px inset #aa9b77;
+            }
+
+            .payment {
+                .payment-type {
+                    input {
+                        display: none;
+
+                        &:checked+label {
+                            color: green;
+                            font-weight: bold;
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                width: 100px;
+                                height: 2px;
+                                color: green;
+                                background-color: green;
+                                margin-top: 25px;
+                            }
+                        }
+                    }
+
+                    label {
+                        display: flex;
+                        cursor: pointer;
+                        justify-content: center;
+                        align-items: center;
+
+                        &:hover, &:active, &:focus {
+                            color: green;
+                            font-weight: bold;
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                width: 100px;
+                                height: 2px;
+                                color: green;
+                                background-color: green;
+                                margin-top: 25px;
+                            }
+                        }
+
+                        .payment-icon {
+                            width: 30px;
+                            height: 30px;
+                        }
+
+                        span {
+                            padding-left: 20px;
+                        }
+                    }
+                }
+            }
+
+            .btn-submit {
+                margin-top: 20px;
+                button {
+                    color: #fff;
+                    background-color: #000;
+                    border: 4px double #aa9b77;
+                    border-radius: 2px;
+                    width: 120px;
+                    height: 44px;
+                    font-size: 28px;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    cursor: pointer;
+
+                    &:hover, &:active, &:focus {
+                        color: green;
+                    }
+                }
+
+                // margin: auto;
+            }
+        }
         
         .error {
             color: red;
