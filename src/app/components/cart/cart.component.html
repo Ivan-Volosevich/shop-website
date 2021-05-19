@@ -4,7 +4,7 @@
 
         <div class="cart-item" *ngFor="let item of items$ | acync | keyvalue" >
             <div class="cart-item--desc">
-                <div class="img"><img src="{{ item.image }}" alt="photo"></div>
+                <div class="img"><img src="{{ item.value.image }}" alt="photo"></div>
                 <ul>
                     <li>{{ item.value.name }}</li>
                     <li>{{ item.value.price | currency:'EUR'}}</li>
@@ -12,13 +12,13 @@
             </div>
 
             <div class="cart-item--quantity">
-                <button *ngIf="item.amount > 0" (click)="decrement(item.id)">-</button>
+                <button *ngIf="item.value.amount > 0" (click)="decrement(item.value.id)">-</button>
                 <!-- <label>
                     <input type="text" placeholder=" -->
                     {{ item.value.amount }}
                     <!-- ">
                 </label> -->
-                <button (click)="increment(item.id)">+</button>
+                <button (click)="increment(item.value.id)">+</button>
 
                 <div class="sum-item">{{ item.value.amount * item.value.price | currency:'EUR' }}</div>
             </div>
