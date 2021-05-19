@@ -1,15 +1,17 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Store } from '@ngrx/store';
+import { createSelector, select, Store } from '@ngrx/store';
 
 import { CatalogService } from '../../services/catalog/catalog.service';
 import { CartService } from '../../services/cart/cart.service';
 import { addToCart, removeFromCart } from '../../actions/actions.cart';
-import { State } from '../../reducers';
-import { Observable } from 'rxjs';
+import { AppState } from '../../reducers';
+import { from, Observable } from 'rxjs';
 import { state } from '@angular/animations';
 import { cartState } from 'src/app/reducers/reducers.cart';
+import { selectCartCount, selectCartItems } from '../../selectors/selectors.cart';
+import { Product } from '../../interfaces/product';
 
 @Component({
   selector: 'app-cart',
@@ -24,24 +26,20 @@ export class CartComponent implements OnInit {
   });
     
 
-  items: any[] = [];
+  items$ = this.store.select(selectCartItems);
   counter: number = 0;
 
-  cartAmount$!: Observable<number>;
+  cartAmount$: Observable<number> = this.store.select(selectCartCount);
 
   constructor(
     private route: ActivatedRoute,
     private catalogService: CatalogService,
     private cart: CartService,
-    private store: Store<{ cart: { amount:number } }>,
-  ) {
-    // this.cartAmount$ = store.select(cart.amount);
-    // console.log('cartAmount$', this.cartAmount$);
-  }
+    private store: Store<AppState>,
+  ) {}
 
   ngOnInit(): void {
-    this.items = this.cart.getCartItems();
-
+    // this.items = this.cart.getCartItems();
     this.store.subscribe((v) => console.log('from store ', v));
   }
 
@@ -56,25 +54,26 @@ export class CartComponent implements OnInit {
   sumOfItem() {}
   
   decrement(id: string) {
-    this.items = this.items.map((el) => {
-      if (el.id === id) {
-        el.amount--;
-      }
-      return el;
-    });
-    this.cart.setItemsInCart(this.items);
+    this.store.dispatch(removeFromCart());
+
+    // this.items = this.items.map((el) => {
+    //   if (el.id === id) {
+    //     el.amount--;
+    //   }
+    //   return el;
+    // });
+    // this.cart.setItemsInCart(this.items);
   }  
 
   increment(id: string) {
     this.store.dispatch(addToCart());
 
-    this.items = this.items.map((el) => {
-      if (el.id === id) {
-        el.amount++;
-      }
-      return el;
-    });
-    this.cart.setItemsInCart(this.items);
+  //   this.items = this.items.map((el) => {
+  //     if (el.id === id) {
+  //       el.amount++;
+  //     }
+  //     return el;
+  //   });
+  //   this.cart.setItemsInCart(this.items);
   }
-
 }

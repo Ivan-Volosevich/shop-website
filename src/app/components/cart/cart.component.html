@@ -31,6 +31,10 @@
         </div> -->
     </div>
 
+    <div>
+        {{ cartAmount$ | async }}
+    </div>
+
     <form [formGroup]="orderForm" (ngSubmit)="onSubmit()">
         <div class="form-body">
             <div class="name">

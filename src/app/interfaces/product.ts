@@ -3,5 +3,5 @@ export interface Product {
     price: number;
     name: string;
     desc?: string;
-    amount?: number;
+    amount: number;
 }
