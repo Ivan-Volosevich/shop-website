@@ -2,12 +2,12 @@
     <div class="cart-container">
         <h3>Cart</h3>
 
-        <div class="cart-item" *ngFor="let item of items" >
+        <div class="cart-item" *ngFor="let item of items$ | acync | keyvalue" >
             <div class="cart-item--desc">
                 <div class="img"><img src="{{ item.image }}" alt="photo"></div>
                 <ul>
-                    <li>{{ item.name }}</li>
-                    <li>{{ item.price | currency:'EUR'}}</li>
+                    <li>{{ item.value.name }}</li>
+                    <li>{{ item.value.price | currency:'EUR'}}</li>
                 </ul>
             </div>
 
@@ -15,12 +15,12 @@
                 <button *ngIf="item.amount > 0" (click)="decrement(item.id)">-</button>
                 <!-- <label>
                     <input type="text" placeholder=" -->
-                    {{ item.amount }}
+                    {{ item.value.amount }}
                     <!-- ">
                 </label> -->
                 <button (click)="increment(item.id)">+</button>
 
-                <div class="sum-item">{{ item.amount * item.price | currency:'EUR' }}</div>
+                <div class="sum-item">{{ item.value.amount * item.value.price | currency:'EUR' }}</div>
             </div>
         </div>
 
