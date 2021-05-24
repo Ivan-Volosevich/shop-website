@@ -47,7 +47,7 @@ export class CartComponent implements OnInit {
     let result = Object.assign(
       this.orderForm.value,
       { items: this.cart.getCartItems() }
-      );
+    );
     console.log(result);
   }
 

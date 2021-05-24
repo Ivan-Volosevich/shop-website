@@ -7,7 +7,6 @@ import { map, withLatestFrom } from 'rxjs/operators';
 
 @Injectable()
 export class CartEffects {
-
     saveToLocalStorage$ = createEffect(() =>
         this.actions$.pipe(
             ofType(addItemToCart),
