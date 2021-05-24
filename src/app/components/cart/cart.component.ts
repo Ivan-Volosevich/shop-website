@@ -5,7 +5,7 @@ import { createSelector, select, Store } from '@ngrx/store';
 
 import { CatalogService } from '../../services/catalog/catalog.service';
 import { CartService } from '../../services/cart/cart.service';
-import { addToCart, removeFromCart } from '../../actions/actions.cart';
+import { incrementItemInCart, decrementItemInCart } from '../../actions/actions.cart';
 import { AppState } from '../../reducers';
 import { from, Observable } from 'rxjs';
 import { state } from '@angular/animations';
@@ -54,26 +54,10 @@ export class CartComponent implements OnInit {
   sumOfItem() {}
   
   decrement(id: string) {
-    this.store.dispatch(removeFromCart());
-
-    // this.items = this.items.map((el) => {
-    //   if (el.id === id) {
-    //     el.amount--;
-    //   }
-    //   return el;
-    // });
-    // this.cart.setItemsInCart(this.items);
+    this.store.dispatch(decrementItemInCart());
   }  
 
   increment(id: string) {
-    this.store.dispatch(addToCart());
-
-  //   this.items = this.items.map((el) => {
-  //     if (el.id === id) {
-  //       el.amount++;
-  //     }
-  //     return el;
-  //   });
-  //   this.cart.setItemsInCart(this.items);
+    this.store.dispatch(incrementItemInCart());
   }
 }

@@ -11,7 +11,7 @@
         <li><a href="#filter">Products</a></li>
         <li>
           <a [routerLink]="['cart']"><img src="../assets/cart.png" alt=""></a>
-          <div class="quantity">{{ cartCounter }}</div>
+          <div class="quantity">{{ cartCounter$ | async }}</div>
         </li>
       </ul>
     </nav>

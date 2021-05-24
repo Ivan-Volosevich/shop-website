@@ -1,6 +1,6 @@
 import { state } from '@angular/animations';
 import { Action, createReducer, on } from '@ngrx/store';
-import { addToCart, removeFromCart, addItemToCart } from '../actions/actions.cart';
+import { incrementItemInCart, decrementItemInCart, addItemToCart } from '../actions/actions.cart';
 import { Product } from '../interfaces/product';
 
 export interface State {
@@ -15,8 +15,8 @@ export const cartState: State = {
 
 const _cartReducer = createReducer(
     cartState,
-    on(addToCart, (state: State) => ({...state, amount: state.amount + 1})),
-    on(removeFromCart, (state: State) => ({...state, amount: state.amount - 1})),
+    on(incrementItemInCart, (state: State) => ({...state, amount: state.amount + 1})),
+    on(decrementItemInCart, (state: State) => ({...state, amount: state.amount - 1})),
     on(addItemToCart, (state: State, product) => {
         if (product.id in state.items) {
             return {
@@ -36,11 +36,12 @@ const _cartReducer = createReducer(
                     ...state.items,
                     [product.id]: {
                         ...product,
-                        amount: 1
+                        amount: 1,
                     }
                 }
             }
         }
+    ({...state, amount: state.amount + 1})
     }),
 );
 

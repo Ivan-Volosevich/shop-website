@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from './services/cart/cart.service';
+import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
+import { selectCartCount } from './selectors/selectors.cart';
+import { AppState } from './reducers';
 
 @Component({
   selector: 'app-root',
@@ -9,13 +13,9 @@ import { CartService } from './services/cart/cart.service';
 export class AppComponent{
   title = 'shop-website';
 
-  cartCounter: number = 0;
+  cartCounter$!: Observable<any>;
 
-  constructor(private cart: CartService) {}
-
-  ngOnInit() {
-    this.cart.getSubscription().subscribe((data) => {
-      this.cartCounter = data;
-    })
+  constructor(private store:  Store<AppState>) {
+    this.cartCounter$ = this.store.select(selectCartCount);
   }
 }
