@@ -1,0 +1,56 @@
+[
+    {
+      "id": "ch-1",
+      "size": "size",
+      "color": "",
+      "name": "shorts",
+      "price": 35,
+      "image": "../assets/ch-shorts.jpg",
+      "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione quidem, blanditiis dolorem fugiat qui vel in quis repellendus sint laboriosam distinctio, tempore quos aspernatur dolore expedita necessitatibus consequuntur."
+    },
+    {
+      "id": "ch-2",
+      "size": "size",
+      "color": "",
+      "name": "panama hat",
+      "price": 15,
+      "image": "../assets/ch-panama.png",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis exercitationem laudantium ratione nobis qui deleniti quos, nesciunt distinctio?"
+    },
+    {
+      "id": "ch-3",
+      "size": "size",
+      "color": "color",
+      "name": "t-shirt",
+      "price": 12,
+      "image": "../assets/ch-t-shirt.png",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio esse vero consectetur tempora!"
+    },
+    {
+      "id": "ch-4",
+      "size": "size",
+      "color": "",
+      "name": "shoes",
+      "price": 30,
+      "image": "../assets/ch-shoes.png",
+      "desc": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore illum animi vel fugiat neque iste, quisquam, beatae libero, repellat officia laborum error harum soluta placeat."
+    },
+    {
+      "id": "ch-5",
+      "size": "size",
+      "color": "color",
+      "name": "glasses",
+      "price": 9.99,
+      "image": "../assets/ch-glasses.png",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing."
+    },
+    {
+      "id": "ch-6",
+      "size": "size",
+      "color": "",
+      "name": "shoes",
+      "price": 30,
+      "image": "../assets/ch-shoes.png",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, nostrum ea?"
+    }
+]

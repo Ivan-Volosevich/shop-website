@@ -11,7 +11,6 @@ import { SliderComponent } from './components/slider/slider.component';
 import { HomeComponent } from './components/home/home.component';
 import { ItemDetailComponent } from './components/item-detail/item-detail.component';
 import { CartComponent } from './components/cart/cart.component';
-import { RedDirective } from './derectives/red.directive';
 import { StoreModule } from '@ngrx/store';
 import { reducers, metaReducers } from './reducers';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
@@ -24,7 +23,6 @@ import { environment } from '../environments/environment';
     HomeComponent,
     ItemDetailComponent,
     CartComponent,
-    RedDirective
   ],
   imports: [
     BrowserModule,
