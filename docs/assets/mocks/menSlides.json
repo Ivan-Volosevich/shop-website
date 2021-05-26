@@ -1,0 +1,47 @@
+[
+    {
+      "id": "m-1",
+      "size": "size",
+      "color": "color",
+      "name": "t-shirt",
+      "price": 5,
+      "image": "../assets/t-shirt.png",
+      "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta dolorum voluptatum amet. Voluptas laborum a veniam minima adipisci suscipit."
+    },
+    {
+      "id": "m-2",
+      "size": "size",
+      "color": "",
+      "name": "Pants FORCLAZ",
+      "price": 30,
+      "image": "../assets/pants.png",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa ad neque aut assumenda voluptas aliquid asperiores, vitae tenetur necessitatibus distinctio illo suscipit explicabo eaque sunt deserunt iusto."
+    },
+    {
+      "id": "m-3",
+      "size": "10litri",
+      "color": "",
+      "name": "backpack",
+      "price": 60,
+      "image": "../assets/backpack.png",
+      "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam quam amet minus ducimus repellendus placeat!"
+    },
+    {
+      "id": "m-4",
+      "size": "size",
+      "color": "",
+      "name": "hat",
+      "price": 15,
+      "image": "../assets/pants.png",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad nulla repellat odit autem quas! Atque distinctio doloribus, error recusandae odio culpa placeat cum."
+    },
+    {
+      "id": "m-5",
+      "size": "size",
+      "color": "color",
+      "name": "scarf",
+      "price": 12,
+      "image": "../assets/scarf.png",
+      "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor sit tenetur rem libero id quaerat ad doloribus in cum."
+    }
+]
