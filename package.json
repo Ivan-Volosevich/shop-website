@@ -7,7 +7,7 @@
   },
   "scripts": {
     "ng": "ng",
-    "postinstall": "bower install",
+    "postinstall": "ng build --prod",
     "start-dev": "ng serve",
     "build": "ng build",
     "test": "ng test",
